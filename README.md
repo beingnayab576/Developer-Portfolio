@@ -52,10 +52,7 @@ developer-portfolio/
 The portfolio includes my CampusMart project and additional sample/demo projects to demonstrate the project listing functionality.
 
 ## Live Website
-
-Add your deployed GitHub Pages URL here.
-
-## Screenshots
+[View My Portfolio]([https://username.github.io/developer-portfolio/](https://beingnayab576.github.io/Developer-Portfolio/))
 
 ## Screenshots
 
