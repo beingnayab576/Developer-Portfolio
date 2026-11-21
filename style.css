@@ -340,3 +340,8 @@ textarea:focus-visible {
     }
 
 }
+
+/* smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
