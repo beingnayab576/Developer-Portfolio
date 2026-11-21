@@ -69,7 +69,7 @@ The portfolio includes my CampusMart project and additional sample/demo projects
 ![Contact Page](images/contact-2.jpg)
 
 ### Mobile View
-![Mobile View](mobile.jpg)
+![Mobile View](images/mobile.jpg)
 
 ## Author
 
