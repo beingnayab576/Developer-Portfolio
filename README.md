@@ -71,6 +71,12 @@ The portfolio includes my CampusMart project and additional sample/demo projects
 ### Mobile View
 ![Mobile View](images/mobile.jpg)
 
+## Future Improvements
+
+- Add more personal projects.
+- Improve website accessibility.
+- Add more interactive features.
+
 ## Author
 
 Created by: Nayab Abbas
