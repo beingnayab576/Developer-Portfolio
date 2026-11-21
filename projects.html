@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore my web development projects and technologies.">
+
+    <title>Projects | My Portfolio</title>
+
+    <!-- css file connect ki hai -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- javascript file connect ki hai -->
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- website ka header -->
+    <header>
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="logo">My Portfolio</a>
+
+            <!-- navigation links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- dark mode button -->
+            <button type="button" id="theme-toggle" aria-pressed="false">
+                Dark Mode
+            </button>
+
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main>
+
+        <section class="projects-section" aria-labelledby="projects-heading">
+
+            <h1 id="projects-heading">My Projects</h1>
+
+            <p>
+                Here are some of my web development projects.
+                You can search and filter them below.
+            </p>
+
+            <!-- search aur filter -->
+            <div class="project-controls">
+
+                <div class="form-group">
+                    <label for="project-search">Search Projects:</label>
+
+                    <input
+                        type="search"
+                        id="project-search"
+                        placeholder="Search by title or technology"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="technology-filter">Filter by Technology:</label>
+
+                    <select id="technology-filter">
+                        <option value="all">All Technologies</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- yahan projects ki counting show hogi -->
+            <p id="project-count" aria-live="polite" role="status"></p>
+
+            <!-- javascript yahan project cards banayegi -->
+            <div id="project-container" class="project-grid"></div>
+
+        </section>
+
+    </main>
+
+    <!-- website ka footer -->
+    <footer>
+        <p>&copy; 2026 My Portfolio. All Rights Reserved.</p>
+
+        <nav aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

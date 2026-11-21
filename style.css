@@ -1,0 +1,342 @@
+/* sab elements ki sizing set ki hai */
+* {
+    box-sizing: border-box;
+}
+
+/* website ke colors aur spacing */
+:root {
+    --bg-color: #f5f7fb;
+    --card-color: #ffffff;
+    --text-color: #222222;
+    --primary-color: #3157c8;
+    --border-color: #dddddd;
+    --footer-color: #e8ecf5;
+    --error-color: #d62828;
+
+    --radius: 10px;
+    --spacing: 20px;
+}
+
+/* dark theme ke colors */
+html[data-theme="dark"] {
+    --bg-color: #151a25;
+    --card-color: #222b3a;
+    --text-color: #f5f5f5;
+    --primary-color: #83a5ff;
+    --border-color: #465064;
+    --footer-color: #202838;
+    --error-color: #ff8585;
+}
+
+/* system ki dark setting */
+@media (prefers-color-scheme: dark) {
+    html[data-theme="system"] {
+        --bg-color: #151a25;
+        --card-color: #222b3a;
+        --text-color: #f5f5f5;
+        --primary-color: #83a5ff;
+        --border-color: #465064;
+        --footer-color: #202838;
+        --error-color: #ff8585;
+    }
+}
+
+/* basic body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* navbar styling */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: var(--spacing);
+    background-color: var(--card-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    font-weight: bold;
+}
+
+.nav-links a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* buttons */
+button,
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+}
+
+button:hover,
+.btn:hover {
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+/* hero section */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: var(--card-color);
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: var(--primary-color);
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* common section styling */
+.about,
+.skills,
+.projects-section,
+.contact-section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about,
+.skills {
+    text-align: center;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.skills li {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    padding: 12px 20px;
+    border-radius: var(--radius);
+}
+
+/* projects search and filter */
+.project-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+/* inputs styling */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* projects grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* project card */
+.project-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 22px;
+    overflow-wrap: anywhere;
+}
+
+.project-card h2 {
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+.project-card p {
+    margin: 12px 0;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tech li {
+    background-color: var(--footer-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* contact form */
+.contact-section {
+    max-width: 650px;
+}
+
+.contact-section h1,
+.projects-section h1 {
+    font-size: clamp(30px, 5vw, 42px);
+}
+
+form {
+    background-color: var(--card-color);
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    margin-top: 25px;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+fieldset label {
+    display: block;
+    margin: 10px 0;
+}
+
+fieldset input,
+#consent {
+    width: auto;
+}
+
+.error {
+    color: var(--error-color);
+    font-size: 13px;
+}
+
+#form-success {
+    color: #16803c;
+    font-weight: bold;
+}
+
+/* footer styling */
+footer {
+    background-color: var(--footer-color);
+    padding: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* keyboard focus styling */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+/* tablet screen */
+@media (min-width: 640px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .project-controls {
+        flex-direction: row;
+    }
+
+    .project-controls .form-group {
+        flex: 1;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* desktop screen */
+@media (min-width: 1024px) {
+
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
